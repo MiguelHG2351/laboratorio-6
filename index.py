@@ -15,4 +15,5 @@ print(type(diff(2*(x**2))))
 decoration = diff(2*(x**2))
 pprint(f'ƒ(x) = {decoration}')
 
-# prettyR = pretty(Integral(sqrt(1/x), x), use_unicode=False) // Más decorado
+prettyR = pretty(Integral(sqrt(1/x), x), use_unicode=False)
+pprint(prettyR)
