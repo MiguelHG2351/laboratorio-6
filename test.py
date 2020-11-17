@@ -25,16 +25,15 @@ try:
     # abs es para no indicarle su monotonia
 
     state_change = 0
-    print(abs(ecuacionNumpy(limit_left)) / abs(ecuacionNumpy(limit_right)))
-    print(abs(ecuacionNumpy(limit_left+1)) / abs(ecuacionNumpy(limit_right+1)))
-
+    
     while abs(ecuacionNumpy(limit_left)) / abs(ecuacionNumpy(limit_right)) >= 1.2 or abs(ecuacionNumpy(limit_right)) / abs(ecuacionNumpy(limit_left)) >= 1.2:
-
+        
         if ecuacionNumpy(limit_left) > ecuacionNumpy(limit_right):
             limit_right += 1
             state_change += 1 
         elif ecuacionNumpy(limit_left) < ecuacionNumpy(limit_right):
             limit_left -= 1
+            state_change -= 1
 
         # el contador aumenta dependiendo de donde se requiera adaptar la ecuación
         # Si se requiere adaptar la izquierda, el contador disminuye
