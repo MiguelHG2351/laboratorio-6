@@ -1,0 +1,5 @@
+Aplicaciones de la derivada
+
+import smypy.solvers import solve
+
+compare -> compara la variable x
