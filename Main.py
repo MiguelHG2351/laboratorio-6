@@ -4,6 +4,7 @@ from limites import Solver_limit
 from derivadas import Solver_diff
 from matrix import Solver_matrix
 from fuctions import Solver_functions
+from diff_app import solver_diff_app
 # from sympy.printing import printer
 
 
@@ -21,7 +22,7 @@ class Main(Solver_limit, Solver_diff, Solver_matrix, Solver_functions):
         if select == 4:
             self.solver_diff()
         if select == 5:
-            self.run()
+            solver_diff_app()
         if select == 6:
             print("\033[0;37;48m \033[0;37;48m")
             exit();
