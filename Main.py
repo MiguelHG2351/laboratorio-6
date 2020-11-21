@@ -2,10 +2,11 @@ import os
 from time import sleep
 from limites import SolverLimit
 from derivadas import Solverdiff
+from matrix import SolverMatrix
 # from sympy.printing import printer
 
 
-class Main(SolverLimit, Solverdiff):
+class Main(SolverLimit, Solverdiff, SolverMatrix):
 
     def select_option(self, select):
         os.system('cls')
@@ -15,7 +16,7 @@ class Main(SolverLimit, Solverdiff):
 
         sleep(1)
         if select == 1:
-            self.run()
+            self.solver_matrix()
         if select == 2:
             self.init()
         if select == 3:
