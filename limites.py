@@ -4,7 +4,7 @@ from sympy import limit, symbols
 from sympy.parsing.sympy_parser import parse_expr
 
 
-class SolverLimit():
+class Solver_limit():
 
     def __init__(self):
         self.x = symbols('x')

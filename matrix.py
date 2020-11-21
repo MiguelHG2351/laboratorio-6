@@ -2,7 +2,7 @@ import os
 from time import sleep
 
 
-class SolverMatrix():
+class Solver_matrix():
 
     def matrix(self, cols, rows):
 

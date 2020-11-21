@@ -1,30 +1,30 @@
 import os
 from time import sleep
-from limites import SolverLimit
-from derivadas import Solverdiff
-from matrix import SolverMatrix
+from limites import Solver_limit
+from derivadas import Solver_diff
+from matrix import Solver_matrix
+from fuctions import Solver_functions
 # from sympy.printing import printer
 
 
-class Main(SolverLimit, Solverdiff, SolverMatrix):
+class Main(Solver_limit, Solver_diff, Solver_matrix, Solver_functions):
 
     def select_option(self, select):
-        os.system('cls')
-        f = open('./logo.txt', "r")
-        ascii = "".join(f.readlines())
-        print(f'\t\t\t{ascii}')
 
         sleep(1)
         if select == 1:
             self.solver_matrix()
         if select == 2:
-            self.init()
+            self.solver_functions()
         if select == 3:
             self.solver_limits()
         if select == 4:
             self.solver_diff()
         if select == 5:
             self.run()
+        if select == 6:
+            print("\033[0;37;48m \033[0;37;48m")
+            exit();
         else:
             self.run()
 
@@ -37,7 +37,7 @@ class Main(SolverLimit, Solverdiff, SolverMatrix):
 
         print('\u001b[33;1m\t\t\t\t\t\t\tProyecto Final de Matemáticas I')
         print(
-            '\n\n\u001b[36m\t\tMatrices\t\tFunciones\t\tLímites\t\tDerivadas\t\tAplicaciones de la derivada')
+            '\n\n\u001b[36m\t\t1-Matrices\t\t2-Funciones\t\t3-Límites\t\t4-Derivadas\t\t5-Aplicaciones de la derivada\t\t6-Salir')
         print(
             "\n\n\033[0;37;48m\t       (row, col)\t\t  f(x)\t\t\tLim f(x)\t  f'(x)\t\t\t\tf'(x)=🏠\033[0;37;48m")
 

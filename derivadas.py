@@ -4,7 +4,7 @@ from sympy import diff, symbols
 from sympy.parsing.sympy_parser import parse_expr
 
 
-class Solverdiff():
+class Solver_diff():
 
     def __init__(self):
         self.x = symbols('x')
@@ -21,15 +21,14 @@ class Solverdiff():
         os.system('cls')
 
         print('\u001b[33;1m\t\t\t\t\t\t\tDerivadas de una Función | Matemáticas I')
-        print('\n\n\u001b[36m\t\t\t\tLímite\t\tLimite Lateral')
 
         ec = ''
 
         try:
-            ec = str(input('\033[1;30;40m\t\tIngrese la función a derivar'))
+            ec = str(input('\033[1;30;40m\t\tIngrese la función a derivar: f(x) = '))
 
             derivar_return = self.derivar(ec)
-            print(f'La derivada es: {derivar_return}')
+            print(f"La derivada es: f'() = {derivar_return}")
             sleep(2)
         except ValueError:
             print('\u001b[31;1m\t\t>>> Error de opciones')
