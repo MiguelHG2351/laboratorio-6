@@ -33,10 +33,10 @@ class SolverLimit():
         direction = ''
 
         try:
-            ec = str(input('\033[1;30;40m\n\t\tIngrese el Límite de la función'))
+            ec = str(input('\033[1;30;40m\n\t\tIngrese el Límite de la función\t: ƒ(x)=  \u001b[32m'))
             trending = str(
-                input('\033[1;30;40ma\t\tAhora tiene que darle una tendencia en el eje X'))
-            direction = str(input('\033[1;30;40ma\t\tDirección del Límite: "+" o "-" si no presione enter'))
+                input('\033[1;30;40ma\n\t\tAhora tiene que darle una tendencia en el eje X: \u001b[32mx -> '))
+            direction = str(input(f'\033[1;30;40m\n\n\t\tDirección del Límite: "+" o "-" si no presione enter: \u001b[32mx -> {trending} '))
 
             limit_return = self.limit(ec, trending, direction)
             print(f'El límite es: {limit_return}')
